@@ -1,0 +1,10 @@
+[user]
+	name = Valentin Vasilyev
+	email = iamvalentin@gmail.com
+[core]
+	editor = vim
+[color]
+	ui = true
+[alias]
+	ci = commit
+	st = status

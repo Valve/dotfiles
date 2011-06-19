@@ -1,0 +1,15 @@
+[ui]
+username=Valentin Vasilyev
+
+[extensions]
+color=
+rebase=
+hgext.extdiff=
+hgext.graphlog=
+hgext.churn=
+hgext.hgk=
+purge=
+convert=
+
+[extdiff]
+meld=
