@@ -11,6 +11,7 @@ set cindent
 set autoindent
 set smartindent
 set expandtab
+set hlsearch
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
