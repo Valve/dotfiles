@@ -1,15 +1,10 @@
 [ui]
 username=Valentin Vasilyev
+merge=meld
 
 [extensions]
 color=
 rebase=
-hgext.extdiff=
 hgext.graphlog=
-hgext.churn=
-hgext.hgk=
 purge=
 convert=
-
-[extdiff]
-meld=
