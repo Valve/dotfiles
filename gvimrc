@@ -21,5 +21,4 @@ nmap <leader>l :set list!<CR>
  
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:?\ ,eol:¬
-set guifont=consolas:h9
-lang messages en_EN.UTF-8
+colorscheme vividchalk
