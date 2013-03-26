@@ -1,0 +1,3 @@
+[
+  {"keys": ["n", "n"], "command":"advanced_new_file", "context": [{"key":"setting.command_mode", "operand": true}]}
+]
