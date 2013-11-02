@@ -1,6 +1,6 @@
 [user]
 	name = Valentin Vasilyev
-	email = iamvalentin@gmail.com
+	email = valentin.vasilyev@outlook.com
 [core]
 	editor = vim
 [color]
@@ -8,3 +8,4 @@
 [alias]
 	ci = commit
 	st = status
+	br = branch
