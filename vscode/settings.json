@@ -2,5 +2,6 @@
 {
     "vim.useCtrlKeys": false,
     "editor.cursorStyle": "block",
-    "editor.cursorBlinking": "blink"
+    "editor.cursorBlinking": "blink",
+    "editor.tabSize": 2
 }
