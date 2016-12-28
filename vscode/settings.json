@@ -3,5 +3,6 @@
     "vim.useCtrlKeys": false,
     "editor.cursorStyle": "block",
     "editor.cursorBlinking": "blink",
-    "editor.tabSize": 2
+    "editor.tabSize": 2, 
+    "workbench.editor.enablePreview": false
 }
