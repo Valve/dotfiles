@@ -1,42 +1,13 @@
--- Some nicer table output
-\pset linestyle unicode
-\pset border 2
-
--- More visual settings
-\pset format wrapped
-
 \set QUIET 1
-\pset null '[NULL]'
-
--- http://www.postgresql.org/docs/9.3/static/app-psql.html#APP-PSQL-PROMPTING
--- \set PROMPT1 '%[%033[1m%]%M %n@%/%R%[%033[0m%]%# '
-\set PROMPT1 '%[%033[1m%][%/] #%[%033[0m%]% '
--- PROMPT2 is printed when the prompt expects more input, like when you type
--- SELECT * FROM<enter>. %R shows what type of input it expects.
-\set PROMPT2 '[more] %R > '
-
--- Show how long each query takes to execute
-\timing
-
--- Use best available output format
+\set PROMPT1 '%~%x%# '
 \x auto
+\pset null '␀'
+\pset linestyle 'unicode'
+\pset border 2
+\pset unicode_header_linestyle double
+set intervalstyle to 'postgres_verbose';
+\setenv LESS '-iMFXSx4R'
+\timing
+\set ON_ERROR_ROLLBACK interactive
 \set VERBOSITY verbose
-\set HISTFILE ~/.psql_history/ :DBNAME.sql
-\set HISTCONTROL ignoredups
-\set COMP_KEYWORD_CASE upper
 \unset QUIET
-
--- psql can't check for a file's existence, so we'll provide an empty local
--- file that users can override with their custom dotfiles. To set your own
--- personal settings, place your own file in ~/.psqlrc.local
-\i ~/.psqlrc.local
-
--- Administration queries
-
-\set tablesize 'SELECT nspname || \'.\' || relname AS \"relation\", pg_size_pretty(pg_relation_size(C.oid)) AS "size" FROM pg_class C LEFT JOIN pg_namespace N ON (N.oid = C.relnamespace) WHERE nspname NOT IN (\'pg_catalog\', \'information_schema\') ORDER BY pg_relation_size(C.oid) DESC LIMIT 40;'
-
--- running queries (9.3)
-\set queries 'select current_timestamp - query_start as runtime,pid,datname,usename,query from pg_stat_activity where query != \'<IDLE>\' order by 1 desc; '
-
--- kill transactions that have been "idle in transaction" for more than 10 minutes (9.3)
-\set kill_old_trans 'select count(pg_terminate_backend(pid)) as nb_killed_proc from pg_stat_activity where query = \'<IDLE> in transaction\' and current_timestamp - query_start > \'5 min\'';
