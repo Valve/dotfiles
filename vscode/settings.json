@@ -1,8 +1,12 @@
-// Place your settings in this file to overwrite the default settings
 {
-    "vim.useCtrlKeys": false,
-    "editor.cursorStyle": "block",
-    "editor.cursorBlinking": "blink",
-    "editor.tabSize": 2, 
-    "workbench.editor.enablePreview": false
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.fontSize": 16,
+    "editor.tabSize": 2,
+    "editor.minimap.enabled": false,
+    "editor.rulers": [ 120 ],
+    "workbench.editor.enablePreview": false,
+    "vim.overrideCopy": false,
+    # next line is only needed on Linux (not necessary on OSX)
+    "keyboard.dispatch": "keyCode",
+    "vim.useCtrlKeys": false
 }
